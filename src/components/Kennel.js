@@ -4,12 +4,18 @@ import "./Animal/Animal.css"
 
 
 import Customer from "../components/Customer/Customer"
+import { CustomerDataProvider } from "../components/Customer/CustomerDataProvider"
+
 import "./Customer/Customer.css"
 
 import Employee from "../components/Employee/Employee"
+import { EmployeeDataProvider } from "../components/Employee/EmployeeDataProvider"
+import EmployeeList from "../components/Employee/EmployeeList"
 import "./Employee/Employee.css"
 
 import Location from "../components/Location/Location"
+import LocationList from "../components/Location/LocationList"
+import LocationDataProvider from "../components/Location/LocationDataProvider"
 import "./Location/Location.css"
 
 export default () => (
@@ -23,33 +29,24 @@ export default () => (
         </address>
 
         <h2>Animals</h2>
-        <article className="animals">
-            <Animal />
-            <Animal />
-            <Animal />
-        </article>
+        <AnimalDataProvider>
+            <AnimalList />
+        </AnimalDataProvider>
 
         <h2>Customers</h2>
-        <article className="customers">
-            <Customer />
-            <Customer />
-            <Customer />
-        </article>
-
+        <CustomerDataProvider>
+            <CustomerList />
+        </CustomerDataProvider>
 
         <h2>Employees</h2>
-        <article className="employees">
-            <Employee />
-            <Employee />
-            <Employee />
-        </article>
+        <EmployeeDataProvider>
+            <EmployeeList />
+        </EmployeeDataProvider>
+
 
         <h2>Locations</h2>
-        <article className="locations">
-            <Location />
-            <Location />
-            <Location />
-
-        </article>
+        <LocationDataProvider>
+            <LocationList />
+        </LocationDataProvider>
     </>
 )
