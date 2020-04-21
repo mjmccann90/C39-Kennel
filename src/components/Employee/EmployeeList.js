@@ -1,16 +1,16 @@
 import React, { useContext } from "react"
 import { EmployeeContext } from "../Employee/EmployeeDataProvider"
-import Location from "../Location/Location"
-import "../Location/Location.css"
+import Employee from "../Employee/Employee"
+import "../Employee/Employee.css"
 
 
 export default () => {
-    const { locations } = useContext(LocationContext)
+    const { employees } = useContext(EmployeeContext)
 
     return (
-        <div className="locations">
+        <div className="employees">
             {
-                locations.map(loc => <Location key={loc.id} location={loc} />)
+                employees.map(employ => <Employee key={employ.id} employee={employ} />)
             }
         </div>
     )

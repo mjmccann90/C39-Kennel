@@ -1,11 +1,15 @@
 import React from "react"
+
+
 import Animal from "../components/Animal/Animal"
+import { AnimalDataProvider } from "../components/Animal/AnimalDataProvider"
+import AnimalList from "../components/Animal/AnimalList"
 import "./Animal/Animal.css"
 
 
 import Customer from "../components/Customer/Customer"
 import { CustomerDataProvider } from "../components/Customer/CustomerDataProvider"
-
+import CustomerList from "../components/Customer/CustomerList"
 import "./Customer/Customer.css"
 
 import Employee from "../components/Employee/Employee"
