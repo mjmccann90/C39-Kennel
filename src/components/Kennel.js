@@ -24,7 +24,7 @@ import "./Location/Location.css"
 
 export default () => (
     <>
-        <h2>Nashville Kennels</h2>
+        <h2>Cosmic Chameleon Cennels</h2>
         <small>Loving care when you're not there.</small>
 
         <address>
@@ -34,7 +34,11 @@ export default () => (
 
         <h2>Animals</h2>
         <AnimalDataProvider>
-            <AnimalList />
+            <LocationDataProvider>
+                <CustomerDataProvider>
+                    <AnimalList />
+                </CustomerDataProvider>
+            </LocationDataProvider>
         </AnimalDataProvider>
 
         <h2>Customers</h2>
@@ -44,7 +48,9 @@ export default () => (
 
         <h2>Employees</h2>
         <EmployeeDataProvider>
-            <EmployeeList />
+            <LocationDataProvider>
+                <EmployeeList />
+            </LocationDataProvider>
         </EmployeeDataProvider>
 
 
