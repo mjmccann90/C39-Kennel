@@ -47,7 +47,7 @@ export default () => (
             <CustomerList />
         </CustomerDataProvider>
 
-        <h2>Employees</h2>
+
         <EmployeeDataProvider>
             <LocationDataProvider>
                 <EmployeeList />
