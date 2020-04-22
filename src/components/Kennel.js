@@ -1,23 +1,24 @@
 import React from "react"
 
+import "./Kennel.css"
 
-// import Animal from "../components/Animal/Animal"
+import Animal from "../components/Animal/Animal"
 import { AnimalDataProvider } from "../components/Animal/AnimalDataProvider"
 import AnimalList from "../components/Animal/AnimalList"
 import "./Animal/Animal.css"
 
 
-// import Customer from "../components/Customer/Customer"
+import Customer from "../components/Customer/Customer"
 import { CustomerDataProvider } from "../components/Customer/CustomerDataProvider"
 import CustomerList from "../components/Customer/CustomerList"
 import "./Customer/Customer.css"
 
-// import Employee from "../components/Employee/Employee"
+import Employee from "../components/Employee/Employee"
 import { EmployeeDataProvider } from "../components/Employee/EmployeeDataProvider"
 import EmployeeList from "../components/Employee/EmployeeList"
 import "./Employee/Employee.css"
 
-// import Location from "../components/Location/Location"
+import Location from "../components/Location/Location"
 import LocationList from "../components/Location/LocationList"
 import LocationDataProvider from "../components/Location/LocationDataProvider"
 import "./Location/Location.css"
@@ -46,7 +47,7 @@ export default () => (
             <CustomerList />
         </CustomerDataProvider>
 
-        <h2>Employees</h2>
+
         <EmployeeDataProvider>
             <LocationDataProvider>
                 <EmployeeList />
