@@ -1,3 +1,7 @@
+// When we use Location component in LocationList, React takes the keys passed
+// to the Location component and puts it into one object
+
+
 import React from "react"
 
 export default (props) => (

@@ -1,3 +1,6 @@
+// When we use Employee component in EmployeeList, React takes the keys passed
+// to the Employee component and puts it into one object
+
 import React from "react"
 
 export default (props) => (
