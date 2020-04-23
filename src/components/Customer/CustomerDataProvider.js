@@ -35,7 +35,9 @@ export const CustomerProvider = (props) => {
     */
     useEffect(() => {
         getCustomers()
-    }, [])
+    },
+        []
+    )
 
     useEffect(() => {
         console.log("****  CUSTOMER APPLICATION STATE CHANGED  ****")
