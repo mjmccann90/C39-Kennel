@@ -1,6 +1,6 @@
 import React, { useState } from "react"
-import Dashboard from "./Dashboard"
-import Auth from "./auth/Auth"
+import Dashboard from "../components/Dashboard"
+import Auth from "../components/Auth/Auth"
 
 export default () => {
     const [check, update] = useState(false)
