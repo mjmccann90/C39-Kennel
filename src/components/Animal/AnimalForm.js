@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from "react"
 import { LocationContext } from "../location/LocationProvider"
-import { AnimalContext } from "./AnimalProvider"
+import { AnimalContext } from "../Animal/AnimalDataProvider"
 
 export default props => {
     const { locations } = useContext(LocationContext)
