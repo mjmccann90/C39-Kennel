@@ -29,7 +29,7 @@ export default ({ employee, location }) => {
                         <label className="label--animal">Address:</label> {employee.address}
                     </div>
                     <div className="animal__location">
-                        <label className="label--animal">Location:</label> {employee.locationId}
+                        <label className="label--animal">Location:</label> {location.locationId}
                     </div>
                 </ModalBody>
             </Modal>
