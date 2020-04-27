@@ -4,7 +4,6 @@ import "./Kennel.css"
 import "./Layout.css"
 
 import { AnimalDataProvider } from "./Animal/AnimalDataProvider"
-import AnimalList from "./Animal/AnimalList"
 import "./Animal/Animal.css"
 
 
@@ -19,6 +18,9 @@ import "./Employee/Employee.css"
 import LocationList from "./Location/LocationList"
 import LocationDataProvider from "./Location/LocationDataProvider"
 import "./Location/Location.css"
+
+import { SearchBar } from "./search/SearchBar"
+import { SearchResults } from "./search/SearchResults"
 
 export default () => {
     const [searchTerms, setTerms] = useState(null)
