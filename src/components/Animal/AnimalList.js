@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useContext, useState, useEffect } from "react"
 import { Button, Modal, ModalBody, ModalHeader } from "reactstrap"
 
 import { LocationContext } from "../Location/LocationDataProvider"
@@ -12,13 +12,27 @@ import Animal from "../Animal/Animal"
 import "../Animal/Animal.css"
 
 
-export default () => {
+const AnimalList = ({ searchTerms }) => {
     const { animals } = useContext(AnimalContext)
     const { locations } = useContext(LocationContext)
     const { customers } = useContext(CustomerContext)
 
     const [modal, setModal] = useState(false)
     const toggle = () => setModal(!modal)
+
+    const [matchingAnimals, setFiltered] = useState([])
+
+    useEffect(
+        () => {
+            if (searchTerms !== "") {
+                const subset = animals.filter(animal => animal.name.toLowerCase().includes(searchTerms))
+                setFiltered(subset)
+            } else {
+                setFiltered([])
+            }
+        },
+        [searchTerms, animals]
+    )
 
     return (
         <>
@@ -33,7 +47,7 @@ export default () => {
             }}>Make Appointment</Button>
             <div className="animals">
                 {
-                    animals.map(ani => {
+                    matchingAnimals.map(ani => {
                         const matchingLocation = locations.find(loc => loc.id === ani.locationId)
                         const matchingCustomer = customers.find(customer => customer.id === ani.customerId)
 
@@ -55,3 +69,4 @@ export default () => {
         </>
     )
 }
+export default AnimalList
