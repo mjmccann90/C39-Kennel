@@ -3,12 +3,10 @@
 
 import React from "react"
 
-export default (props) => (
+export const Animal = ({ animal, location, customer }) => (
     <section className="animal">
-        <h3 className="animal__name">{props.animal.name}</h3>
-        <div className="animal__breed">{props.animal.breed}</div>
-        <div className="animal__customerId">{props.customer.customerId}</div>
-        <div className="animal__locationId">{props.location.name}</div>
-
+        <div className="animal__breed">{animal.breed}</div>
+        <div className="animal__owner">Customer Name: {customer.name}</div>
+        <div className="animal__location">Checked-in at: {location.name}</div>
     </section>
 )
