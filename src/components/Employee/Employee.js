@@ -3,7 +3,7 @@
 
 import React, { useState, useContext } from "react"
 import { Modal, ModalHeader, ModalBody } from "reactstrap"
-import { EmployeeContext } from "./EmployeeProvider"
+import { EmployeeContext } from "../Employee/EmployeeDataProvider"
 
 export default ({ employee, location }) => {
     const [modal, setModal] = useState(false)

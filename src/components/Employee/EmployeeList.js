@@ -1,12 +1,12 @@
 import React, { useContext } from "react"
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap"
 
-import { EmployeeContext } from "../Employee/EmployeeDataProvider"
 import { LocationContext } from "../Location/LocationDataProvider"
 
+import { EmployeeContext } from "../Employee/EmployeeDataProvider"
 import Employee from "../Employee/Employee"
 import "../Employee/Employee.css"
-import EmployeeForm from "./EmployeeForm"
+import EmployeeForm from "../Employee/EmployeeForm"
 
 
 export default () => {
